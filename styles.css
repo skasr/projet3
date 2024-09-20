@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: rgba(51, 51, 51, 0.8);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+.parallax {
+    background-image: url('background.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+@keyframes coutureAnimation {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.parallax h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: coutureAnimation 1s ease-out forwards; /* Ajout de l'animation */
+}
+
+.button-container {
+    margin-top: 20px; /* Espacement entre le titre et le bouton */
+}
+
+.discover-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.discover-btn:hover {
+    transform: scale(1.1); /* Zoom au survol */
+    background-color: #e5533d; /* Changement de couleur au survol */
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 200px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 8px;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.responsive-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .parallax {
+        height: 300px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

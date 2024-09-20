@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mon Projet Époustouflant</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="#section1">Accueil</a></li>
+                <li><a href="#section3">Galerie</a></li>
+                <li><a href="#section4">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section1" class="parallax">
+            <h1>Bienvenue</h1>
+            <div class="button-container">
+                <button class="discover-btn">Découvrir plus</button>
+            </div>
+        </section>
+
+        <section id="section3">
+            <h2>Galerie d'images</h2>
+            <div class="gallery">
+                <img src="defile1.jpg" loading="lazy" alt="Description de l'image 1">
+                <img src="defile2.jpg" loading="lazy" alt="Description de l'image 2">
+                <img src="defile3.jpg" loading="lazy" alt="Description de l'image 3">
+            </div>
+        </section>
+
+        <section id="section4">
+            <h2>Vidéo</h2>
+            <video controls class="responsive-video" aria-label="Vidéo informative">
+                <source src="video.mp4" type="video/mp4">
+                <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mon Projet Époustouflant</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
